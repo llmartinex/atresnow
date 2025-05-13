@@ -5,26 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AtresNow Recommender</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      color: #ffffff;
-      height: 100vh;
-      background-image: url('fondo-atresnow.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
+    * {
+      box-sizing: border-box;
     }
 
-    /* Oscurecer la imagen de fondo */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #000000, #ff5500);
+      position: relative;
+      color: white;
+    }
+
     body::before {
       content: "";
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.4);
       z-index: 0;
     }
 
@@ -45,22 +45,21 @@
     .headline {
       font-size: 24px;
       font-weight: bold;
-      margin-bottom: 12px;
     }
 
     .rest {
       font-size: 18px;
       font-weight: 500;
-      line-height: 1.4;
+      margin-top: 12px;
     }
 
     .btn {
       background: #ff6600;
-      color: #000;
+      color: black;
       border: none;
       padding: 12px 24px;
-      margin-top: 30px;
       border-radius: 12px;
+      margin-top: 24px;
       font-weight: bold;
       font-size: 16px;
       cursor: pointer;
@@ -76,44 +75,46 @@
 <body>
   <div class="card">
     <div id="message">
-      <p class="headline">Cargando recomendación...</p>
+      <p class="headline">Cargando recomendación... ⏳</p>
     </div>
-    <button class="btn" onclick="window.location.href='https://aged-dawn-5880.dev.animaapp.io/?v=1747163826.212405'">Ver en AtresNow</button>
+    <button class="btn" onclick="window.location.href='https://aged-dawn-5880.dev.animaapp.io/?v=1747163826.212405'">
+      📺 Ver en AtresNow
+    </button>
   </div>
 
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const messages = [
-        "Vaya… parece que echas de menos a tu ex. Te recomiendo la miniserie La edad de la ira. Spoiler: lo tuyo no era tan dramático.",
-        "¿Otra vez stalkeando a tu crush? Mejor invierte tu tiempo en La Ruta, la nostalgia que sí merece la pena.",
-        "Eso que sientes no es ansiedad, es falta de thriller. Mira la miniserie Cardo y verás lo que es intensidad de verdad.",
-        "¿Aburrido? Tu vida necesita más drama. Te recetamos Veneno en vena.",
-        "Cuidado, parece que necesitas una terapia… audiovisual. Prueba con Los Protegidos: El Regreso.",
-        "Si hoy tampoco has ligado por Tinder, dale una oportunidad a Amar es para siempre. Al menos ahí alguien se quiere.",
-        "¿Te han dejado en visto? A Eva también la ignoran… en la miniserie Toy Boy.",
-        "Te veo triste. Necesitas ver Pequeñas coincidencias. Lo tuyo también puede ser destino.",
-        "¿Otra crisis existencial? La novia gitana tiene las respuestas (y muchos misterios).",
-        "Ese mood solo lo cura una buena miniserie. Prueba con Cristo y Rey.",
-        "¿Te has mirado al espejo y has dicho “qué hago con mi vida”? Exacto, ver By Ana Milán es lo que haces.",
-        "Pareces el prota de un drama… pero menos entretenido. Aprende de Heridas.",
-        "Tienes cara de domingo sin plan. Se soluciona con la miniserie Entre tierras.",
-        "¿No sabes qué hacer con tu vida? Al menos sabrás qué ver: resumen a tu medida de Un paso adelante, clásico imprescindible.",
-        "Esa cara es de haberlo dado todo el finde. Baja el ritmo con Drag Race España, puro espectáculo.",
-        "Te veo cara de reality. ¿Has probado El desafío?",
-        "Spoiler: tus dramas no son tan intensos como los de Física o Química: El reencuentro.",
-        "¿Echas de menos los 2000? Vuelve a Los hombres de Paco. Nostalgia pura.",
-        "Tu energía pide plot twist. Dale play a la miniserie Honor, te va a enganchar.",
-        "Tienes pinta de que amas el salseo. Te recomendamos Amar es para siempre. No falla.",
-        "¿Todo te sale mal hoy? Tranquilo, a Mikel en La red púrpura le va peor.",
-        "Tu día necesita un toque de acción. La Unidad: Kabul te espera.",
-        "¿Mucho postureo y poca verdad? Mira Zorras y siéntete identificado.",
-        "Parece que has tenido un día intenso. Relájate con el podcast Dos años y un día, humor garantizado.",
-        "Si hoy tampoco has entendido nada… Apagón te hará sentir comprendido.",
-        "¿Estás en tu época intensa? Te recomendamos la miniserie El Nudo. Lo vas a vivir.",
-        "No es que estés solo, es que aún no has visto Las Noches de Tefía. Así se pasa mejor el drama.",
-        "Tu vibe hoy es de true crime. Dale a resumen a tu medida de Crímenes Online.",
-        "¿Harto de todo? Al menos no eres un personaje de Alba.",
-        "¿En crisis? Bienvenido al club. Una vida menos en Canarias es tu nueva obsesión."
+        "Vaya… 😢 parece que echas de menos a tu ex. 💔 Te recomiendo la miniserie La edad de la ira. 🎭",
+        "¿Otra vez stalkeando a tu crush? 👀 Mejor invierte tu tiempo en La Ruta. 🚗 Nostalgia que sí merece la pena. 💿",
+        "Eso que sientes no es ansiedad 😵‍💫, es falta de thriller. Mira la miniserie Cardo 🌸 y verás lo que es intensidad de verdad. 🔥",
+        "¿Aburrido? 😐 Tu vida necesita más drama. Te recetamos Veneno 🐍 en vena. 💉",
+        "Cuidado ⚠️, parece que necesitas una terapia… audiovisual. 🛋️ Prueba con Los Protegidos: El Regreso. 🦸‍♂️",
+        "Si hoy tampoco has ligado por Tinder 💔, dale una oportunidad a Amar es para siempre. 💘 Al menos ahí alguien se quiere. 😅",
+        "¿Te han dejado en visto? 📱 A Eva también la ignoran… en la miniserie Toy Boy. 🔥",
+        "Te veo triste 😞. Necesitas ver Pequeñas coincidencias. ✨ Lo tuyo también puede ser destino. 🎯",
+        "¿Otra crisis existencial? 🤯 La novia gitana tiene las respuestas 🔮 (y muchos misterios). 🧩",
+        "Ese mood 🧠 solo lo cura una buena miniserie. Prueba con Cristo y Rey. 👑",
+        "¿Te has mirado al espejo 🪞 y has dicho “qué hago con mi vida”? Exacto, ver By Ana Milán es lo que haces. 🧘‍♀️",
+        "Pareces el prota de un drama… pero menos entretenido 😬. Aprende de Heridas. 🩹",
+        "Tienes cara de domingo sin plan 🛋️. Se soluciona con la miniserie Entre tierras. 🌾",
+        "¿No sabes qué hacer con tu vida? 🤷‍♂️ Al menos sabrás qué ver: resumen a tu medida de Un paso adelante. 🕺",
+        "Esa cara es de haberlo dado todo el finde 😵. Baja el ritmo con Drag Race España. 👑✨",
+        "Te veo cara de reality. 📸 ¿Has probado El desafío? 🧗",
+        "Spoiler ⚠️: tus dramas no son tan intensos como los de Física o Química: El reencuentro. 🧪",
+        "¿Echas de menos los 2000? 📼 Vuelve a Los hombres de Paco. 👮‍♂️ Nostalgia pura. 💭",
+        "Tu energía pide plot twist 🔄. Dale play a Honor. ⚖️ Te va a enganchar. 🎬",
+        "Tienes pinta de que amas el salseo 🍵. Te recomendamos Amar es para siempre. 💔💘",
+        "¿Todo te sale mal hoy? 😫 Tranquilo, a Mikel en La red púrpura le va peor. 🕷️",
+        "Tu día necesita un toque de acción 💥. La Unidad: Kabul te espera. 🪖",
+        "¿Mucho postureo y poca verdad? 🤳 Mira Zorras y siéntete identificado. 🔥",
+        "Parece que has tenido un día intenso 😩. Relájate con el podcast Dos años y un día. 🎙️😄",
+        "Si hoy tampoco has entendido nada… 🤯 Apagón te hará sentir comprendido. 💡",
+        "¿Estás en tu época intensa? 💥 Te recomendamos la miniserie El Nudo. 🎢 Lo vas a vivir. 😮",
+        "No es que estés solo 😞, es que aún no has visto Las Noches de Tefía. 🌌 Así se pasa mejor el drama. 📺",
+        "Tu vibe hoy es de true crime 🔎. Dale a resumen a tu medida de Crímenes Online. 👁️",
+        "¿Harto de todo? 😤 Al menos no eres un personaje de Alba. 🎭",
+        "¿En crisis? 😬 Bienvenido al club. 🫂 Una vida menos en Canarias es tu nueva obsesión. 🌴"
       ];
 
       const pick = messages[Math.floor(Math.random() * messages.length)];
@@ -121,8 +122,7 @@
       const firstSentence = split[0] + '.';
       const rest = split.slice(1).join('. ');
 
-      const messageDiv = document.getElementById("message");
-      messageDiv.innerHTML = `
+      document.getElementById("message").innerHTML = `
         <p class="headline">${firstSentence}</p>
         <p class="rest">${rest}</p>
       `;
