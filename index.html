@@ -36,6 +36,15 @@
       z-index: 0;
     }
 
+    .zoom-container {
+      transform: scale(1.25);
+      transform-origin: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .card {
       position: relative;
       z-index: 1;
@@ -80,11 +89,13 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <div id="message">
-      <p class="headline">Cargando recomendación...</p>
+  <div class="zoom-container">
+    <div class="card">
+      <div id="message">
+        <p class="headline">Cargando recomendación...</p>
+      </div>
+      <button class="btn" onclick="window.location.href='https://aged-dawn-5880.dev.animaapp.io/?v=1747163826.212405'">Ver en AtresNow</button>
     </div>
-    <button class="btn" onclick="window.location.href='https://aged-dawn-5880.dev.animaapp.io/?v=1747163826.212405'">Ver en AtresNow</button>
   </div>
 
   <script>
